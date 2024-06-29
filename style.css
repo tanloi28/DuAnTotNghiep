@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: "Jost", sans-serif;
+}
+.container {
+  @apply mx-auto max-w-7xl  px-4;
+}
+.placeholder-white::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+input[id="numberInput"]::-webkit-outer-spin-button,
+input[id="numberInput"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[id="numberInput"] {
+  -moz-appearance: textfield;
+}
+
+.btn-black {
+  @apply bg-blackL  border-black shadow-lg shadow-slate-600/50 hover:text-black hover:border-0 hover:bg-white text-white;
+}
