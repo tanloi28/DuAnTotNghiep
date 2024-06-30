@@ -46,6 +46,44 @@ input[type="checkbox"]:checked::before {
   padding: -2rem;
   line-height: 1.5rem;
 }
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+input[type="radio"]:checked {
+  background-color: black;
+  border-color: black;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+}
+
+.custom-radio label {
+  margin-left: 0.5rem;
+}
 .btn-black {
   @apply bg-blackL  border-black shadow-lg shadow-slate-600/50 hover:text-black hover:border-0 hover:bg-white text-white;
 }
@@ -58,5 +96,9 @@ input[type="checkbox"]:checked::before {
 }
 .dashed-line {
   border-top: 2px dashed #ccc;
+  width: 100%;
+}
+.dashed-black {
+  border-top: 2px dashed #222222;
   width: 100%;
 }
