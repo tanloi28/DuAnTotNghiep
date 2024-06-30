@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="../public/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Check Out</title>
 
@@ -22,15 +22,19 @@
     <!-- Heaser -->
     <header>
       <div class="container my-3">
-        <div class="flex justify-between items-center">
-          <div class="Logo w-28">
+        <div class="flex justify-around lg:justify-between items-center">
+          <div class="order-1 lg:hidden">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </div>
+          <div class="order-2 Logo w-28">
             <img
               src="../assets/images/Logo.svg "
               alt=""
-              class="w-[143px] h-[42.24]"
+              class="lg:w-[143px] lg:h-[42.24px] w-32 h-8"
             />
           </div>
-          <nav>
+
+          <nav class="order-3 hidden lg:block">
             <ul class="flex items-center space-x-2">
               <li>
                 <a
@@ -69,14 +73,16 @@
               </li>
             </ul>
           </nav>
-          <div class="icon space-x-6 *:cursor-pointer">
+          <div class="order-4 icon space-x-6 *:cursor-pointer">
             <span class=""
               ><i class="fa-solid fa-magnifying-glass text-xl"></i
             ></span>
             <span><i class="fa-regular fa-heart text-xl"></i></span>
             <span><i class="fa-regular fa-bag-shopping text-xl"></i></span>
 
-            <button class="btn-black py-3 px-7 font-serif rounded-lg text-lg">
+            <button
+              class="btn-black lg:text-lg lg:py-3 lg:px-7 py-2 px-5 font-serif rounded-lg"
+            >
               Login
             </button>
           </div>
@@ -87,10 +93,10 @@
     <main>
       <!--Checkout -->
       <section class="container">
-        <div class="mx-12 my-[84px]">
-          <h1 class="text-4xl font-medium tracking-[1px] mb-9">Checkout</h1>
-          <div class="grid grid-cols-12 gap-4 px-0">
-            <div class="col-span-8">
+        <div class="lg:mx-12 mx-6 lg:my-[84px] my-[42px]">
+          <h1 class="h1cart">Checkout</h1>
+          <div class="grid lg:grid-cols-12 gap-4 px-0 justify-center">
+            <div class="lg:col-span-8 col-span-6">
               <table>
                 <thead>
                   <tr
@@ -98,7 +104,7 @@
                   >
                     <th>Products</th>
                     <th class="px-2">Price</th>
-                    <th class="text-center">Quantity</th>
+                    <th class="lg:text-center hidden lg:block">Quantity</th>
                     <th>Subtotal</th>
                     <th></th>
                   </tr>
@@ -106,7 +112,9 @@
                 <tbody class="*:border-hrBlack *:border-b">
                   <tr class="*:py-8">
                     <td>
-                      <div class="flex gap-5 px-2 w-[352px]">
+                      <div
+                        class="flex gap-5 px-2 xl:w-[352px] sm:w-[392px] md:w-[309px]"
+                      >
                         <img
                           src="../assets/images/checkout/sanpham1.png"
                           alt=""
@@ -115,12 +123,30 @@
                         <div class="px-1">
                           <h3 class="font-bold">Product Name NameName</h3>
                           <p>Size: <span>S</span></p>
+                          <div class="lg:hidden flex mt-2">
+                            <button
+                              class="pl-3 border border-r-0 border-blackL rounded-s-lg text-sm"
+                            >
+                              <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <input
+                              type="number"
+                              id="numberInput"
+                              value="1"
+                              class="w-9 h-7 border-y focus:ring-0 focus:outline-none text-center border-blackL"
+                            />
+                            <button
+                              class="pr-3 border border-l-0 border-blackL rounded-e-lg text-sm"
+                            >
+                              <i class="fa-solid fa-plus"></i>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </td>
-                    <td class="w-24">$50.00</td>
-                    <td class="">
-                      <div class="border rounded-lg border-black mx-5">
+                    <td class="xl:w-24 sm:w-15 w-10 px-5">$50.00</td>
+                    <td class="hidden lg:block">
+                      <div class="border rounded-lg border-black xl:mx-5">
                         <button class="py-1 pl-3">
                           <i class="fa-solid fa-minus"></i>
                         </button>
@@ -135,17 +161,21 @@
                         </button>
                       </div>
                     </td>
-                    <td class="w-24">$50.00</td>
-                    <td class="">
-                      <i
-                        class="fa-regular fa-trash-can"
-                        style="color: #db5151"
-                      ></i>
+                    <td class="xl:w-24 sm:w-15 w-10">$50.00</td>
+                    <td class="px-1">
+                      <button>
+                        <i
+                          class="fa-regular fa-trash-can"
+                          style="color: #db5151"
+                        ></i>
+                      </button>
                     </td>
                   </tr>
                   <tr class="*:py-8">
                     <td>
-                      <div class="flex gap-5 px-2 w-[352px]">
+                      <div
+                        class="flex gap-5 px-2 xl:w-[352px] sm:w-[392px] md:w-[309px]"
+                      >
                         <img
                           src="../assets/images/checkout/sanpham1.png"
                           alt=""
@@ -154,12 +184,30 @@
                         <div class="px-1">
                           <h3 class="font-bold">Product Name NameName</h3>
                           <p>Size: <span>S</span></p>
+                          <div class="lg:hidden flex mt-2">
+                            <button
+                              class="pl-3 border border-r-0 border-blackL rounded-s-lg text-sm"
+                            >
+                              <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <input
+                              type="number"
+                              id="numberInput"
+                              value="1"
+                              class="w-9 h-7 border-y focus:ring-0 focus:outline-none text-center border-blackL"
+                            />
+                            <button
+                              class="pr-3 border border-l-0 border-blackL rounded-e-lg text-sm"
+                            >
+                              <i class="fa-solid fa-plus"></i>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </td>
-                    <td class="w-24">$50.00</td>
-                    <td class="">
-                      <div class="border rounded-lg border-black mx-5">
+                    <td class="xl:w-24 sm:w-15 w-10 px-5">$50.00</td>
+                    <td class="hidden lg:block">
+                      <div class="border rounded-lg border-black xl:mx-5">
                         <button class="py-1 pl-3">
                           <i class="fa-solid fa-minus"></i>
                         </button>
@@ -174,19 +222,82 @@
                         </button>
                       </div>
                     </td>
-                    <td class="w-24">$50.00</td>
-                    <td class="w-10">
-                      <i
-                        class="fa-regular fa-trash-can"
-                        style="color: #db5151"
-                      ></i>
+                    <td class="xl:w-24 sm:w-15 w-10">$50.00</td>
+                    <td class="px-1">
+                      <button>
+                        <i
+                          class="fa-regular fa-trash-can"
+                          style="color: #db5151"
+                        ></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="*:py-8">
+                    <td>
+                      <div
+                        class="flex gap-5 px-2 xl:w-[352px] sm:w-[392px] md:w-[309px]"
+                      >
+                        <img
+                          src="../assets/images/checkout/sanpham1.png"
+                          alt=""
+                          class="w-12 h-12"
+                        />
+                        <div class="px-1">
+                          <h3 class="font-bold">Product Name NameName</h3>
+                          <p>Size: <span>S</span></p>
+                          <div class="lg:hidden flex mt-2">
+                            <button
+                              class="pl-3 border border-r-0 border-blackL rounded-s-lg text-sm"
+                            >
+                              <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <input
+                              type="number"
+                              id="numberInput"
+                              value="1"
+                              class="w-9 h-7 border-y focus:ring-0 focus:outline-none text-center border-blackL"
+                            />
+                            <button
+                              class="pr-3 border border-l-0 border-blackL rounded-e-lg text-sm"
+                            >
+                              <i class="fa-solid fa-plus"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="xl:w-24 sm:w-15 w-10 px-5">$50.00</td>
+                    <td class="hidden lg:block">
+                      <div class="border rounded-lg border-black xl:mx-5">
+                        <button class="py-1 pl-3">
+                          <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input
+                          type="number"
+                          id="numberInput"
+                          value="1"
+                          class="w-9 h-10 border-0 focus:ring-0 focus:outline-none text-center"
+                        />
+                        <button class="py-1 pr-3">
+                          <i class="fa-solid fa-plus"></i>
+                        </button>
+                      </div>
+                    </td>
+                    <td class="xl:w-24 sm:w-15 w-10">$50.00</td>
+                    <td class="px-1">
+                      <button>
+                        <i
+                          class="fa-regular fa-trash-can"
+                          style="color: #db5151"
+                        ></i>
+                      </button>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div class="col-span-4">
-              <div class="border px-4 py-1 w-[359px]">
+            <div class="lg:col-span-4 col-span-6">
+              <div class="border px-4 py-1 lg:w-[359px] rounded-md">
                 <div
                   class="flex justify-between font-bold border-hrBlack border-b py-4"
                 >
@@ -200,7 +311,7 @@
                     <input
                       type="text"
                       placeholder="FLAT50"
-                      class="w-[218px] h-[56px] px-4 rounded-s-lg focus:outline-none border border-l-2 border-t-2 border-blackL border-r-0"
+                      class="lg:w-[218px] w-[300px] h-[56px] px-4 rounded-s-lg focus:outline-none border border-l-2 border-t-2 border-blackL border-r-0"
                     />
                     <button
                       class="bg-black hover:bg-stone-700 w-[101px] h-[55px] border border-black rounded-r-lg text-white"
@@ -220,9 +331,11 @@
                   <h4>Grand Total</h4>
                   <span>$205.00</span>
                 </div>
-                <button class="btn-black rounded-lg mb-4 w-[320px] h-[56px]">
-                  Proceed to Checkout
-                </button>
+                <div class="flex justify-center">
+                  <button class="btn-black rounded-lg mb-4 w-[320px] h-[56px]">
+                    Proceed to Checkout
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -231,13 +344,15 @@
     </main>
     <footer class="bg-black text-white">
       <div class="container">
-        <div class="grid grid-cols-12 gap-8 py-14 border-b border-stone-700">
-          <div class="col-span-4">
+        <div
+          class="grid grid-cols-12 gap-8 mx-4 py-14 border-b border-stone-700"
+        >
+          <div class="lg:col-span-4 col-span-6">
             <div>
               <img
                 src="../assets/images/Logofooter.png "
                 alt=""
-                class="w-[143px] h-[42.24]"
+                class="lg:w-[143px] lg:h-[42.24px] w-32 h-8"
               />
             </div>
             <div class="my-[39px] space-y-5 w-[261px]">
@@ -251,13 +366,13 @@
               </div>
               <div class="*:px-1 flex">
                 <i class="fa-regular fa-location-dot text-lg"></i>
-                <span class="mx-2"
+                <span class="mx-2 lg:w-full w-48"
                   >3891 Ranchview Dr.Richardson, California 626339</span
                 >
               </div>
             </div>
           </div>
-          <div class="col-span-2">
+          <div class="lg:col-span-2 col-span-6">
             <h1 class="text-xl font-semibold mb-3">Information</h1>
             <ul class="">
               <li class="mb-3"><a href="" class="">My Acount</a></li>
@@ -268,7 +383,7 @@
               <li class="mb-3"><a href="">Checkout</a></li>
             </ul>
           </div>
-          <div class="col-span-2">
+          <div class="lg:col-span-2 col-span-6">
             <h1 class="text-xl font-semibold mb-3">Service</h1>
             <ul>
               <li class="mb-3"><a href="">About Us</a></li>
@@ -278,9 +393,9 @@
               <li class="mb-3"><a href="">Terms & Conditions</a></li>
             </ul>
           </div>
-          <div class="col-span-4">
+          <div class="lg:col-span-4 col-span-6">
             <h1 class="text-xl font-semibold mb-4">Subscribe</h1>
-            <p class="w-80 mb-5">
+            <p class="lg:w-80 mb-5">
               Enter your email below to be the first to know about new
               collections and product launches.
             </p>
@@ -292,11 +407,11 @@
               <input
                 type="email"
                 placeholder="Your Email"
-                class="w-[305px] bg-blackL text-[15px] py-3 px-12 rounded-lg text-white border shadow-lg shadow-slate-600/50 focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none placeholder-white"
+                class="lg:w-[305px] w-[200px] bg-blackL text-[15px] py-3 px-12 rounded-lg text-white border shadow-lg shadow-slate-600/50 focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none placeholder-white"
               />
               <button type="submit">
                 <i
-                  class="fa-solid fa-arrow-right absolute text-gray-400 top-4 left-[270px] text-xl"
+                  class="fa-solid fa-arrow-right absolute text-gray-400 lg:top-4 lg:left-[270px] text-xl top-4 left-[170px]"
                 ></i>
               </button>
             </div>
@@ -304,7 +419,9 @@
         </div>
 
         <div class="flex justify-between py-3">
-          <div><img src="./assets/images/bank.png" alt="" class="h-7" /></div>
+          <div class="">
+            <img src="../assets/images/bank.png" alt="" class="h-7" />
+          </div>
           <div>© 2024 Krist All Rights are Reserved.</div>
           <div class="*:text-2xl *:px-3">
             <i class="fa-brands fa-facebook" style="color: #ffffff"></i
