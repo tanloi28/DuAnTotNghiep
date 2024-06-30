@@ -9,6 +9,7 @@ export default {
       },
       backgroundImage: {
         bannerL: "url('/src/assets/images/banner.png')",
+        Logninimge: "url('/src/assets/images/lognin/banner.png')",
       },
     },
   },

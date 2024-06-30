@@ -22,15 +22,19 @@
     <!-- Heaser -->
     <header>
       <div class="container my-3">
-        <div class="flex justify-between items-center">
-          <div class="Logo w-28">
+        <div class="flex justify-around lg:justify-between items-center">
+          <div class="order-1 lg:hidden">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </div>
+          <div class="order-2 Logo w-28">
             <img
               src="../assets/images/Logo.svg "
               alt=""
-              class="w-[143px] h-[42.24]"
+              class="lg:w-[143px] lg:h-[42.24px] w-32 h-8"
             />
           </div>
-          <nav>
+
+          <nav class="order-3 hidden lg:block">
             <ul class="flex items-center space-x-2">
               <li>
                 <a
@@ -69,14 +73,16 @@
               </li>
             </ul>
           </nav>
-          <div class="icon space-x-6 *:cursor-pointer">
+          <div class="order-4 icon space-x-6 *:cursor-pointer">
             <span class=""
               ><i class="fa-solid fa-magnifying-glass text-xl"></i
             ></span>
             <span><i class="fa-regular fa-heart text-xl"></i></span>
             <span><i class="fa-regular fa-bag-shopping text-xl"></i></span>
 
-            <button class="btn-black py-3 px-7 font-serif rounded-lg text-lg">
+            <button
+              class="btn-black lg:text-lg lg:py-3 lg:px-7 py-2 px-5 font-serif rounded-lg"
+            >
               Login
             </button>
           </div>
@@ -86,13 +92,15 @@
 
     <footer class="bg-black text-white">
       <div class="container">
-        <div class="grid grid-cols-12 gap-8 py-14 border-b border-stone-700">
-          <div class="col-span-4">
+        <div
+          class="grid grid-cols-12 gap-8 mx-4 py-14 border-b border-stone-700"
+        >
+          <div class="lg:col-span-4 col-span-6">
             <div>
               <img
-                src="./assets/images/Logofooter.png "
+                src="../assets/images/Logofooter.png "
                 alt=""
-                class="w-[143px] h-[42.24]"
+                class="lg:w-[143px] lg:h-[42.24px] w-32 h-8"
               />
             </div>
             <div class="my-[39px] space-y-5 w-[261px]">
@@ -106,13 +114,13 @@
               </div>
               <div class="*:px-1 flex">
                 <i class="fa-regular fa-location-dot text-lg"></i>
-                <span class="mx-2"
+                <span class="mx-2 lg:w-full w-48"
                   >3891 Ranchview Dr.Richardson, California 626339</span
                 >
               </div>
             </div>
           </div>
-          <div class="col-span-2">
+          <div class="lg:col-span-2 col-span-6">
             <h1 class="text-xl font-semibold mb-3">Information</h1>
             <ul class="">
               <li class="mb-3"><a href="" class="">My Acount</a></li>
@@ -123,7 +131,7 @@
               <li class="mb-3"><a href="">Checkout</a></li>
             </ul>
           </div>
-          <div class="col-span-2">
+          <div class="lg:col-span-2 col-span-6">
             <h1 class="text-xl font-semibold mb-3">Service</h1>
             <ul>
               <li class="mb-3"><a href="">About Us</a></li>
@@ -133,9 +141,9 @@
               <li class="mb-3"><a href="">Terms & Conditions</a></li>
             </ul>
           </div>
-          <div class="col-span-4">
+          <div class="lg:col-span-4 col-span-6">
             <h1 class="text-xl font-semibold mb-4">Subscribe</h1>
-            <p class="w-80 mb-5">
+            <p class="lg:w-80 mb-5">
               Enter your email below to be the first to know about new
               collections and product launches.
             </p>
@@ -147,11 +155,11 @@
               <input
                 type="email"
                 placeholder="Your Email"
-                class="w-[305px] bg-blackL text-[15px] py-3 px-12 rounded-lg text-white border shadow-lg shadow-slate-600/50 focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none placeholder-white"
+                class="lg:w-[305px] w-[200px] bg-blackL text-[15px] py-3 px-12 rounded-lg text-white border shadow-lg shadow-slate-600/50 focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none placeholder-white"
               />
               <button type="submit">
                 <i
-                  class="fa-solid fa-arrow-right absolute text-gray-400 top-4 left-[270px] text-xl"
+                  class="fa-solid fa-arrow-right absolute text-gray-400 lg:top-4 lg:left-[270px] text-xl top-4 left-[170px]"
                 ></i>
               </button>
             </div>
@@ -159,7 +167,9 @@
         </div>
 
         <div class="flex justify-between py-3">
-          <div><img src="./assets/images/bank.png" alt="" class="h-7" /></div>
+          <div class="">
+            <img src="../assets/images/bank.png" alt="" class="h-7" />
+          </div>
           <div>© 2024 Krist All Rights are Reserved.</div>
           <div class="*:text-2xl *:px-3">
             <i class="fa-brands fa-facebook" style="color: #ffffff"></i
